@@ -2,6 +2,7 @@ import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { AuthModule } from '../auth/auth.module';
 import { PrismaModule } from '../prisma/prisma.module';
+import { FindOneUserDb } from '../users/database/findOne.db';
 import { CreateNoteController } from './controllers/create.controller';
 import { FindAllNotesController } from './controllers/findAll.controller';
 import { FindOneNoteController } from './controllers/findOne.controller';
@@ -16,7 +17,7 @@ import { FindOneNoteService } from './services/findOne.service';
 import { UpdateNoteService } from './services/update.service';
 
 @Module({
-  imports: [HttpModule, PrismaModule, AuthModule],
+  imports: [HttpModule, PrismaModule, AuthModule, FindOneUserDb],
   controllers: [
     CreateNoteController,
     UpdateNoteController,
