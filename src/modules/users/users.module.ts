@@ -18,6 +18,6 @@ import { FindOneUserService } from './services/findOne.service';
     CreateUserDb,
     FindOneUserDb,
   ],
-  exports: [CreateUserDb, FindOneUserDb],
+  exports: [FindOneUserDb],
 })
 export class UsersModule {}
